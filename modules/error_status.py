@@ -2,7 +2,7 @@ from modules import connection
 from modules import formatter
 
 
-def get_top_three_articles():
+def error_status():
     db_connection = connection.get_connection()
     # You need to join the logs to the path
     cursor = db_connection.cursor()
@@ -24,10 +24,10 @@ def get_top_three_articles():
     return cursor.fetchall()
 
 
-def print_error_logs():
-    print("Top articles:")
+def print_error_status():
+    print("Error status:")
     formatter.repeat_separator()
-    for item in get_top_three_articles():
+    for item in error_status():
         pass
 
     formatter.repeat_separator()

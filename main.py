@@ -1,12 +1,12 @@
 #! /usr/bin/env python
-from modules import top_three_articles, top_three_authors, error_logs
+from modules import articles, authors, error_status
 
 
 def main():
-    top_three_articles.print_top_three_articles()
-    top_three_authors.print_top_three_authors()
-    error_logs.print_error_logs()
+    articles.print_articles()
+    authors.print_authors()
+    error_status.print_error_status()
 
-
+#
 if __name__ == '__main__':
     main()
